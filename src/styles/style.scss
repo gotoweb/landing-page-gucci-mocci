@@ -1,0 +1,70 @@
+$body-color: white;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body-color;
+  margin: 0;
+  padding: 0;
+}
+
+.viewport {
+  height: 100vh;
+  background-color: darkblue;
+  color: white;
+}
+
+.flex-2-cols {
+  display: flex;
+  align-items: center;
+
+  & > .col {
+    flex: 1 0 0%;
+    width: 50%;
+    max-height: 100%;
+    padding: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+h1 {
+  background: radial-gradient(ellipse at center, #f3f026 10%, rgb(255, 118, 26) 100%);
+  background-size: 54% 156%;
+  background-position: center center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slide-in {
+  // before
+  opacity: 0;
+  transform: translateX(-50px);
+
+  &.fade {
+    // after
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateX(0px);
+
+    opacity: 1;
+  }
+}
+
+.full-height {
+  height: 100%;
+}
+
+.fit {
+  max-width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.align-right {
+  text-align: right;
+}
+
+#world {
+  background-color: gray;
+}
